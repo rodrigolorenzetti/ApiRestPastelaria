@@ -2,10 +2,13 @@
 import db
 from mod_funcionario.FuncionarioModel import FuncionarioDB
 
+from fastapi import Depends
+import security
+
 from fastapi import APIRouter
 from pydantic import BaseModel
 
-router = APIRouter()
+router = APIRouter( dependencies=[Depends(security.verify_token), Depends(security.verify_key)] )
 
 class Funcionario(BaseModel):
     codigo: int = None
