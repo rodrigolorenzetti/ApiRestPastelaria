@@ -1,17 +1,18 @@
 ### Verbo GET – listar
-GET http://localhost:8000/cliente/0 HTTP/1.1
+GET http://localhost:8000/cliente/2 HTTP/1.1
 
 ### Verbo POST – adicionar
-POST http://localhost:8000/cliente/4 HTTP/1.1
+POST http://localhost:8000/cliente/ HTTP/1.1
 content-type: application/json
 
 {
-    "nome" : "Bolinhas dos Testes",
-    "cpf" : "12345678909",
+    "nome" : "Rodrigo Lorenzetti Cordova",
+    "cpf" : "123455378909",
     "telefone" : "49898989",
     "senha" : "abc",
     "compra_fiado" : 0,
-    "dia_fiado" : 0
+    "dia_fiado" : 0,
+    "matricula" : "1231231"
 }
 
 ### Verbo PUT – atualiza
@@ -28,4 +29,4 @@ content-type: application/json
 }
 
 ### Verbo DELETE - excluir
-DELETE http://localhost:8000/cliente/3 HTTP/1.1
+DELETE http://localhost:8000/cliente/2 HTTP/1.1
